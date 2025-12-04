@@ -67,7 +67,13 @@ public class LineasDeEspera {
                     ddouble Lq=llegada(1-pk);
                     double L=p(1-(k+1)*math.pow(p, k) + k*math.pow(p, k+1))/(1-p)(1-math.pow(p, k+1));
                     double W=L/Lq;
-
+                    System.out.println("Carga total del sistema (a): " + a);
+                    System.out.println("Utilizacion del sistema (P): " + p );
+                    System.out.println("Probabilidad de que no haya clientes en el sistema (Po): " + Po);
+                    System.out.println("Probabilidad de rechazo (Pk): " + pk );
+                    System.out.println("Taza efectiva de entradas: (Lq): " + Lq);
+                    System.out.println("Longitud promedio del sistema (L): " + L);
+                    System.out.println("Tiempo total del sistema (w): " + W);
                 }
             }
         } while(opcion!=4);
