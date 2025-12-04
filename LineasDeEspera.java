@@ -56,8 +56,18 @@ public class LineasDeEspera {
                     double llegada=sol.nextDouble();
                     System.out.println("Ingresa el numero de servicios (μ): ");
                     double servicio=sol.nextDouble();
+                    System.out.println("Probabilidad efectiiva de arribo landa (c): ");
+                    double c=sol.nextDouble();
+                    System.out.println("Probabilidad de rechazo (k): ");
+                    double k=sol.nextDouble();
                     double a=llegada/servicio;
-                    
+                    double p=a/c;
+                    double Po=1-p/1-p*Math.pow(p, k+1);
+                    double pk=Math.pow(p, k)*Po;
+                    ddouble Lq=llegada(1-pk);
+                    double L=p(1-(k+1)*math.pow(p, k) + k*math.pow(p, k+1))/(1-p)(1-math.pow(p, k+1));
+                    double W=L/Lq;
+
                 }
             }
         } while(opcion!=4);
