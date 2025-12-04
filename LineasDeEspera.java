@@ -41,7 +41,10 @@ public class LineasDeEspera {
                     double W=Wq+(1/servicio);
                     L=llegada/servicio;
                     System.out.println("Carga total del sistema (a): " + a);
-                    System.out.println("Utilizacion del sistema (P): "");
+                    System.out.println("Utilizacion del sistema (P): " + p + "%");
+                    System.out.println("Probabilidad de que no haya clientes en el sistema (Po): " + Po);
+                    System.out.println("Probabilidad de que un cliente tenga que esperar: " + Pespera + "Horas");
+                    System.out.println("Longitud promedio en la cola: " + Lq);
                 }
             }
         } while(opcion!=3);
