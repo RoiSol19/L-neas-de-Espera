@@ -8,6 +8,7 @@ public class LineasDeEspera {
             System.out.println("\n \n \tMenu");
             System.out.println("1. M/M/1");
             System.out.println("2. M/M/C");
+            System.out.println("3. M/M/k");
             System.out.println("4. Salir");
             System.out.println("Opcion: ");
             opcion = sol.nextInt();
@@ -51,7 +52,12 @@ public class LineasDeEspera {
                     System.out.println("Numero promedio en el sistema (L): " + L);
                 }
                 case 3->{
-
+                    System.out.println("Ingresa el numero de llegadas (λ): ");
+                    double llegada=sol.nextDouble();
+                    System.out.println("Ingresa el numero de servicios (μ): ");
+                    double servicio=sol.nextDouble();
+                    double a=llegada/servicio;
+                    
                 }
             }
         } while(opcion!=4);
