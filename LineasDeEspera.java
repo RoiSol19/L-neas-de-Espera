@@ -34,10 +34,23 @@ public class LineasDeEspera {
                     int c= sol.nextInt();
                     double a=llegada/servicio;
                     double p=a/c;
-                    
+                    double Po=math.pow(a,c-1)/(factorial(0))+math.pow(a,c-1)/(factorial(c-1)*(1-p));
+                    double Pespera=math.pow(a, c)/(factorial(c)*(1-p))*Po;
+                    double Lq=Pespera*p/(1-p);
+                    double Wq=Lq/llegada;
+                    double W=Wq+(1/servicio);
+                    L=llegada/servicio;
+                    System.out.println("Carga total del sistema (a): " + a);
+                    System.out.println("Utilizacion del sistema (P): "");
                 }
             }
+        } while(opcion!=3);
+    }
+    public static double factorial(int n){
+        if(n==0 || n==1){
+            return 1;
+        }else{
+            return n*factorial(n-1);
         }
-        while(opcion!=3);
     }
 }
