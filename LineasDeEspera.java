@@ -8,6 +8,7 @@ public class LineasDeEspera {
             System.out.println("\n \n \tMenu");
             System.out.println("1. M/M/1");
             System.out.println("2. M/M/C");
+            System.out.println("4. Salir");
             System.out.println("Opcion: ");
             opcion = sol.nextInt();
             switch(opcion){
@@ -39,15 +40,21 @@ public class LineasDeEspera {
                     double Lq=Pespera*p/(1-p);
                     double Wq=Lq/llegada;
                     double W=Wq+(1/servicio);
-                    L=llegada/servicio;
+                    double L=llegada/servicio;
                     System.out.println("Carga total del sistema (a): " + a);
                     System.out.println("Utilizacion del sistema (P): " + p + "%");
                     System.out.println("Probabilidad de que no haya clientes en el sistema (Po): " + Po);
                     System.out.println("Probabilidad de que un cliente tenga que esperar: " + Pespera + "Horas");
                     System.out.println("Longitud promedio en la cola: " + Lq);
+                    System.out.println("Tiempo promedio de espera en la cola (Wq): " + Wq);
+                    System.out.println("Tiempo total en el sistema (W): " + W);
+                    System.out.println("Numero promedio en el sistema (L): " + L);
+                }
+                case 3->{
+
                 }
             }
-        } while(opcion!=3);
+        } while(opcion!=4);
     }
     public static double factorial(int n){
         if(n==0 || n==1){
