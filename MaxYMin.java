@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class MaxYMin {
     public static void main (String[] args){
         int opcion;
-        Scanner sol=new Sxanner(System.in);
+        Scanner sol=new Scanner(System.in);
         do{
             System.out.println("\n \n \tMenu");
             System.out.println("1. Maximizar");
@@ -39,5 +39,9 @@ public static void simplex (Scanner sol, boolean maximizar){
     double a22=sol.nextDouble();
     System.out.println("Ingresa la constante de restricciones 2 (b2): ");
     double b2=sol.nextDouble();
-    double[][] tabla= new double[3][5];
+    double[][] tabla= {
+        {-x1, -x2, 0, 0, b1},
+        {a11, a12, 1, 0, b2},
+        {a21, a22, 0, 1, 0}
+    };
 }
